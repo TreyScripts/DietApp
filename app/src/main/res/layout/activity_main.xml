@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090808"
+    android:backgroundTint="#121111"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="515dp"
+        android:layout_height="262dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="144dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="6dp"
+        android:text="Time of the day:"
+        android:textAlignment="center"
+        android:textColor="#F2EDED"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <RadioGroup
+        android:id="@+id/rGroup"
+        android:layout_width="250dp"
+        android:layout_height="289dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="45dp"
+        android:foregroundTint="#E7DDDD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnMeals"
+        app:layout_constraintTop_toBottomOf="@+id/time">
+
+        <RadioButton
+            android:id="@+id/mBreakfast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:foregroundTint="#C3B7B7"
+            android:text="Morning: Breakfast"
+            android:textColor="#E4DEDE"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/MMSnack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Mid-Morning: Snack"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/aftLunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Afternoon: Lunch"
+            android:textColor="#E7DEDE"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/aftSnack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Afternoon Snack: QuickBites"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFDFD"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/dMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="Dinner: Main course"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/dDessert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:text="After Dinner Snack"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnMeals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="22dp"
+        android:text="Meals"
+        android:textColor="#1AE924"
+        app:layout_constraintEnd_toStartOf="@+id/rGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="16dp"
+        android:text="Reset"
+        android:textColor="#18CA20"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnMeals"
+        app:layout_constraintEnd_toStartOf="@+id/rGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
